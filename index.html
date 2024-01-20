@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ophelia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">hey<span>Ophelia</span></div>
+    <div id="app">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="nav-link">prompt</a></li>
+                <li>/</li>
+                <li><a href="favorites.html" class="nav-link">favorites</a></li>
+                <li>/</li>
+                <li><a href="explore.html" class="nav-link">explore</a></li>
+            </ul>
+        </nav>
+        <div class="loading" id="loading">
+            <div class="loader"></div>
+        </div>        
+        <div class="card-view">
+            <p id="affirmationText">type your topic or select a tag below to generate an affirmation!</p>
+        </div>
+        
+
+        <input type="text" id="affirmationPrompt" placeholder="topic" class="input-field">
+        
+        <div class="category-container">
+            <!-- Category buttons will be added here dynamically -->
+        </div>
+        
+        <button id="generateButton" class="generate-button">generate</button>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

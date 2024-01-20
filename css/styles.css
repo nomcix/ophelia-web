@@ -1,0 +1,191 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#8d89ff, black); /* Keep the background */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Start from top */
+    align-items: center; /* Center horizontally */
+}
+
+#app {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px; /* Additional space from the logo */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: whitesmoke; /* Primary color */
+    margin-top: 20px; /* Margin at the top */
+    text-align: center; /* Center text */
+}
+
+
+.logo span {
+    color: whitesmoke; /* A darker shade for the 'Ophelia' part */
+}
+
+.navbar {
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+.navbar ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 10px;
+    color: whitesmoke;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #4b4b7c; /* A darker shade for hover effect */
+}
+
+.loading {
+    display: none; /* Hide by default, show when loading */
+}
+
+.card-view {
+    min-width: 300px;
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    background: rgba(141, 137, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto; /* Centered horizontally */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+.card-view p {
+    flex: 1; /* Allow the text to expand and remain centered */
+    font-size: 1.25rem; /* Adjust to match .title2 */
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0;
+}
+
+
+.card-view:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0; /* Adjusted margin for spacing */
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    outline: none;
+    box-shadow: inset 0 0 0 2px rgba(141, 137, 255, 0.3); /* Subtle inner shadow as the border */
+    transition: box-shadow 0.3s;
+}
+
+.input-field:focus {
+    box-shadow: inset 0 0 0 2px #8d89ff; /* More pronounced inner shadow on focus */
+}
+
+.input-field::placeholder {
+    color: transparent; /* Transparent placeholder text */
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.category-button, .generate-button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    color: whitesmoke;
+    background: #8d89ff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.category-button:hover, .generate-button:hover {
+    background-color: #7a77ff; /* Slightly darker shade on hover */
+    transform: translateY(-2px); /* Slightly raise the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.generate-button {
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.generate-button:disabled {
+    background-color: #b0adf5; /* Lighter shade for disabled state */
+    cursor: not-allowed;
+}
+
+.theme-toggle {
+    padding: 10px 20px;
+    border: 2px solid #8d89ff; /* Border color can be adjusted */
+    background-color: transparent;
+    color: #8d89ff;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #8d89ff;
+    color: whitesmoke;
+}
+
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #8d89ff; /* Adjust the spinner color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* Add spinning animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
